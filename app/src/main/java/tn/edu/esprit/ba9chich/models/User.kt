@@ -1,6 +1,6 @@
 package tn.edu.esprit.ba9chich.models
 
-
+import com.google.gson.annotations.SerializedName
 
 data class User (
     @SerializedName("_id")

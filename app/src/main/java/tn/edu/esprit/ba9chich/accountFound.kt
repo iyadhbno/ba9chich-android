@@ -10,7 +10,7 @@ class accountFound : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_account_found)
-        btnLogin = findViewById(R.id.findAccount)
+        btnLogin = findViewById(R.id.sendTransaction)
 
 
         btnLogin.setOnClickListener{

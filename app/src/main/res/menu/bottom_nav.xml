@@ -5,19 +5,19 @@
     <item
         android:id="@+id/mihome"
         android:icon="@drawable/ic_baseline_home_24"
-        android:title="Home"></item>
+        android:title="Home" />
     <item
         android:id="@+id/mimessage"
         android:icon="@drawable/ic_baseline_message_24"
-        android:title="Message"></item>
+        android:title="Message" />
     <item
         android:id="@+id/miprofil"
         android:icon="@drawable/ic_baseline_person_24"
-        android:title="Profil"></item>
+        android:title="Profil" />
     <item
         android:id="@+id/miservice"
         android:icon="@drawable/ic_baseline_menu_24"
-        android:title="Menu"></item>
+        android:title="Menu" />
 
 
 </menu>

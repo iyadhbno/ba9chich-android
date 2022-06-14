@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".accountFound">
 
 
@@ -25,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Write down your code"
+            android:text="@string/write_down_your_code"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="22sp"
             android:textStyle="bold"
@@ -40,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:hint="code"
+            android:hint="@string/code"
             app:errorEnabled="true"
 
             app:layout_constraintEnd_toEndOf="parent"
@@ -53,16 +54,17 @@
                 android:id="@+id/txtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:textColorHint="#616161" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/findAccount"
+            android:id="@+id/sendTransaction"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:text="Verify"
+            android:text="@string/verify"
             android:textColor="@color/white"
             android:textSize="13sp"
 

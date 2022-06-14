@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">ba9chich</string>
+    <string name="verify">Verify</string>
+    <string name="code">code</string>
+    <string name="write_down_your_code">Write down your code</string>
+    <string name="change_password">Change Password</string>
+    <string name="password">Password</string>
+    <string name="confirmed_password">Confirmed Password</string>
+    <string name="confirm">Confirm</string>
+    <string name="account_email">Account Email:</string>
+    <string name="email">email</string>
+    <string name="find_my_account">Find my account</string>
+    <string name="send">Send</string>
+    <string name="enter_message">Enter Message</string>
+    <string name="submit">submit</string>
 </resources>

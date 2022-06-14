@@ -6,22 +6,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.ArrayMap
-import android.util.Log
 import android.util.Patterns
 import android.view.WindowManager
 import android.widget.Button
-import android.widget.Toast
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.google.gson.Gson
-import okhttp3.MediaType
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody
 import org.json.JSONObject
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import tn.edu.esprit.ba9chich.models.User
 import tn.edu.esprit.ba9chich.utils.ApiInterface
 
 class ForgetPassword : AppCompatActivity() {
@@ -34,7 +27,7 @@ class ForgetPassword : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forget_password)
-        btnLogin = findViewById(R.id.findAccount)
+        btnLogin = findViewById(R.id.sendTransaction)
         mSharedPref = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
         txtLogin = findViewById(R.id.txtEmail)
         txtLayoutLogin = findViewById(R.id.txtLayoutEmailConfirmation)

@@ -24,7 +24,7 @@ class verificationCode : AppCompatActivity() {
 
         nowuser = gson.fromJson(us, User::class.java)
         txtFullName.text = nowuser.nom
-        btnLogin = findViewById(R.id.findAccount)
+        btnLogin = findViewById(R.id.sendTransaction)
         btnLogin.setOnClickListener{
             val mainIntent = Intent(this, accountFound::class.java)
 

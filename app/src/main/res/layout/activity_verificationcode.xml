@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".verificationCode">
 
 
@@ -40,7 +41,7 @@
             android:layout_height="180dp"
             layout="@layout/layout_user"/>
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/findAccount"
+            android:id="@+id/sendTransaction"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"

@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
 
@@ -12,7 +13,7 @@
         android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="Welcome"
         android:textColor="@color/colorPrimary"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -47,6 +48,9 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+
+
+        app:endIconMode="password_toggle"
         android:id="@+id/txtLayoutAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,6 +64,7 @@
         app:startIconTint="@color/colorPrimary">
 
         <com.google.android.material.textfield.TextInputEditText
+
             android:id="@+id/txtAge"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

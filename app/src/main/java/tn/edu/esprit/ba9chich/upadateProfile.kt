@@ -9,9 +9,11 @@ import android.util.Log
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.google.gson.Gson
+import okhttp3.MediaType
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody
 import org.json.JSONObject
@@ -21,8 +23,7 @@ import retrofit2.Response
 import tn.edu.esprit.ba9chich.models.User
 import tn.edu.esprit.ba9chich.utils.ApiInterface
 
-class changePassword : AppCompatActivity() {
-
+class upadateProfile : AppCompatActivity() {
     lateinit var btnLogin: Button
     lateinit var txtPassword: TextInputEditText
     lateinit var txtLayoutPassword: TextInputLayout
@@ -33,8 +34,18 @@ class changePassword : AppCompatActivity() {
     lateinit var txtLayoutPasswordConfirmed: TextInputLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_change_password)
-        btnLogin = findViewById(R.id.sendTransaction)
+        setContentView(R.layout.activity_upadateprofile)
+
+        val toolbar: Toolbar = findViewById(R.id.toolbarback)
+        setSupportActionBar(toolbar)
+
+
+        toolbar.setNavigationOnClickListener {
+
+
+            finish()
+        }
+        btnLogin = findViewById(R.id.findAccount)
 
         mSharedPref = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
         val gson = Gson()
@@ -64,15 +75,13 @@ class changePassword : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if (txtPassword!!.text.toString() != txtPasswordConfirmed!!.text.toString()) {
-                txtLayoutPassword!!.error = "Password don't match"
-                txtLayoutPasswordConfirmed!!.error = "Password don't match"
-                return@setOnClickListener
-            }
+
             mainIntent = Intent(this, MainActivity::class.java)
 
             doLogin()
         }
+
+
     }
     private fun doLogin(){
 
@@ -87,9 +96,9 @@ class changePassword : AppCompatActivity() {
 //put something inside the map, could be null
 //put something inside the map, could be null
         jsonParams["email"] = nowuser.email
-        jsonParams["password"] = txtPassword!!.text.toString()
-        jsonParams["phone"] = nowuser.phone
-        jsonParams["nom"] = nowuser.nom
+        jsonParams["nom"] = txtPassword!!.text.toString()
+        jsonParams["phone"] = txtPasswordConfirmed!!.text.toString()
+
 
 
         val body = RequestBody.create(
@@ -97,21 +106,21 @@ class changePassword : AppCompatActivity() {
             JSONObject(jsonParams).toString()
         )
 
-        apiInterface.UpdateUser(body,nowuser.id).enqueue(object : Callback<User> {
+        apiInterface.updateusernotpass(body,nowuser.id).enqueue(object : Callback<User> {
 
             override fun onResponse(call: Call<User>, response: Response<User>) {
 
                 val user = response.body()
 
                 if (user != null){
-                    Toast.makeText(this@changePassword, "Password changed", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@upadateProfile, "User Updated", Toast.LENGTH_SHORT).show()
                     Log.d("user",user.toString())
 
 
                     startActivity(mainIntent)
                     finish()
                 }else{
-                    Toast.makeText(this@changePassword, "Password can not change", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@upadateProfile, "User can not Update", Toast.LENGTH_SHORT).show()
                 }
 
 
@@ -119,7 +128,7 @@ class changePassword : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<User>, t: Throwable) {
-                Toast.makeText(this@changePassword, t.message, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@upadateProfile, t.message, Toast.LENGTH_SHORT).show()
 
 
                 window.clearFlags( WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE)

@@ -24,6 +24,9 @@
             android:name=".changePassword"
             android:exported="false" />
         <activity
+            android:name=".upadateProfile"
+            android:exported="false" />
+        <activity
             android:name=".verificationCode"
             android:exported="false" />
         <activity
@@ -41,6 +44,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".HomeActivity"
             android:exported="false" />

@@ -5,8 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".verificationCode">
+    tools:context=".verificationcode">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarback"
+
+        app:navigationIcon="@drawable/ic_baseline_navigate_before_24"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+
+
+        app:title="Account Found"
+        app:titleTextColor="@color/white" />
 
     <LinearLayout
         android:id="@+id/line1"
@@ -39,9 +55,9 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_height="180dp"
-            layout="@layout/layout_user"/>
+            layout="@layout/layoutme"/>
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/sendTransaction"
+            android:id="@+id/findAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"

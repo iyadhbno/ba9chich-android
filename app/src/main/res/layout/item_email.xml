@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginBottom="15dp"
-            android:text="username@domaine.com"
+            android:text="username@esprit.tn"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold" />

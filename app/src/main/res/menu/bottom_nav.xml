@@ -4,20 +4,21 @@
 
     <item
         android:id="@+id/mihome"
-        android:icon="@drawable/ic_baseline_home_24"
-        android:title="Home" />
+        android:icon="@drawable/ic_baseline_monetization_on_24"
+        android:title="Expense"></item>
     <item
         android:id="@+id/mimessage"
+        android:icon="@drawable/ic_baseline_transform_24"
+        android:title="Transaction"></item>
+    <item
+        android:id="@+id/messenger"
         android:icon="@drawable/ic_baseline_message_24"
-        android:title="Message" />
+        android:title="Messenger"></item>
     <item
         android:id="@+id/miprofil"
         android:icon="@drawable/ic_baseline_person_24"
         android:title="Profil" />
-    <item
-        android:id="@+id/miservice"
-        android:icon="@drawable/ic_baseline_menu_24"
-        android:title="Menu" />
+
 
 
 </menu>

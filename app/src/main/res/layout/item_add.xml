@@ -24,13 +24,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <ImageView
-
                     android:padding="1dp"
                     android:src="@drawable/ic_person1"
                     android:layout_width="35dp"
                     android:layout_height="35dp"/>
                 <TextView
-                    android:text="Full Name"
+                    android:text="Name"
                     android:textSize="16sp"
                     android:layout_margin="5dp"
                     android:textStyle="bold|normal"
@@ -59,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="Edit Information"
+                    android:text="Update"
                     android:textColor="@color/colorPrimary"
                     android:textSize="16sp"
                     android:textStyle="bold|normal" />

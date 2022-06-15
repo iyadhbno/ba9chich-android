@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+tools:context=".expenseFragment">
+
+
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/fab"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:layout_gravity="end|bottom"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="9dp"
+    android:layout_marginBottom="4dp"
+    android:outlineAmbientShadowColor="@color/colorPrimary"
+    app:rippleColor="@color/colorPrimary"
+    android:background="@color/colorPrimary"
+    app:borderWidth="0dp"
+    android:outlineSpotShadowColor="@color/colorPrimary"
+    android:backgroundTint="@color/colorPrimary"
+    android:contentDescription="submit"
+
+
+    android:src="@drawable/ic_baseline_add_circle_24" />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerChampion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        />
+</RelativeLayout>
+
+
+
+
+
+
+
+</FrameLayout>
